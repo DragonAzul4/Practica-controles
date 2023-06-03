@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica de controles con HTML5</title>
+    <link rel="stylesheet" href="Estetica.css">
+</head>
+<body>
+    <div class="video">
+        <video id="videoPlayer" width="500">
+            <source src="./video.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="Buttons">
+        <button class="btn" onclick="playPause()">Play/Pause</button>
+        <button class="btn" onclick="reload()">Reload</button>
+        <button class="btn" onclick="makeLarge()">Large</button>
+        <button class="btn" onclick="makeSmall()">Small</button>
+        <button class="btn" onclick="makeNormal()">Normal</button>
+    </div>
+
+    <script>
+        
+        let video = document.getElementById("videoPlayer");
+
+        function playPause() { 
+        if (video.paused) 
+            video.play(); 
+        else 
+            video.pause();
+        }
+
+        function reload() { 
+        video.load(); 
+        }
+
+        function makeLarge() { 
+        video.width = 1000; 
+        }
+
+        function makeSmall() { 
+        video.width = 250; 
+        } 
+
+        function makeNormal() { 
+        video.width = 500; 
+        }
+
+    </script>
+</body>
+</html>
